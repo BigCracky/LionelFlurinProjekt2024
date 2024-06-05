@@ -2,7 +2,7 @@
 hsp = 0; // horizontalle geschwindigkeit, nennt man nicht hspeed
 max_hsp = 5;  
 vsp = 0; //vertical speed variablle, not called vspeed
-grav = 0.5;
+grav = 0.5
 
 
 
