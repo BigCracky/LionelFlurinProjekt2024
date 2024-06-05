@@ -64,3 +64,5 @@ if (onground) jumpbuffer = 10;
 if (keyboard_check_pressed(vk_enter)) {
 	game_restart();
 }
+
+//test
