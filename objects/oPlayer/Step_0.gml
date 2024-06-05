@@ -56,13 +56,31 @@ if (place_meeting(x, y + vsp, oBlock)) {
 // Vertikale Bewegung ausführen
 y += vsp;
 
-//Calculate c. Status
+//Calculate current Status
 onground = place_meeting(x,y+groundbuffer,oBlock);
 if (onground) jumpbuffer = 10;
+
+//Adjust Sprite Image
+image_speed = 1; //100% Image Speed
+	//if moving, orient sprite according to direction of movement
+if (hsp != 0) image_xscale = sign(hsp);
+if (!onground) {
+	sprite_index = sPlayerAir;
+	image_speed = 0
+	image_index = (vsp > 0); //falling = 1, everyting else = 0
+	
+} else { //if on the ground
+	if (hsp != 0) { //if moving left or right 
+		sprite_index = sPlayerRun;
+	} else { //standingstill
+		sprite_index = sPlayer;
+		
+	}
+}
+
 //quick restart game
 
 if (keyboard_check_pressed(vk_enter)) {
 	game_restart();
 }
 
-//test
