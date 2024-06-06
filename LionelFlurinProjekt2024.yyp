@@ -59,6 +59,7 @@
     {"id":{"name":"sDungeonTileSet","path":"sprites/sDungeonTileSet/sDungeonTileSet.yy",},},
     {"id":{"name":"sJumppad","path":"sprites/sJumppad/sJumppad.yy",},},
     {"id":{"name":"sJumppadSuper","path":"sprites/sJumppadSuper/sJumppadSuper.yy",},},
+    {"id":{"name":"sMenuBackground_1","path":"sprites/sMenuBackground_1/sMenuBackground_1.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
     {"id":{"name":"sPlayerAir","path":"sprites/sPlayerAir/sPlayerAir.yy",},},
     {"id":{"name":"sPlayerRun","path":"sprites/sPlayerRun/sPlayerRun.yy",},},
