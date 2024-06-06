@@ -96,5 +96,5 @@ if (!onground) { // In der Luft
 // Spiel schnell neu starten
 // ---------------------------
 if (keyboard_check_pressed(vk_enter)) {
-    game_restart();
+    room_restart();
 }
