@@ -45,19 +45,24 @@ if (place_meeting(x + hsp, y, oBlock) || place_meeting(x + hsp, y, oBlockHalf)) 
 x += hsp;
 
 // Vertikale Kollision
-if (place_meeting(x, y + vsp, oBlock) || place_meeting(x, y + vsp, oBlockHalf)) {
+if (place_meeting(x, y + vsp, oBlock) || place_meeting(x, y + vsp, oBlockHalf) || place_meeting(x, y + vsp, oJumpPad)) {
     var onepixel = sign(vsp);
-    while (!place_meeting(x, y + onepixel, oBlock) && !place_meeting(x, y + onepixel, oBlockHalf)) {
+    while (!place_meeting(x, y + onepixel, oBlock) && !place_meeting(x, y + onepixel, oBlockHalf) && !place_meeting(x, y + onepixel, oJumpPad)) {
         y += onepixel;
     }
-    vsp = 0;    
+    vsp = 0;
+
+    // Zusatzsprung bei Kollision mit oJumpPad
+    if (place_meeting(x, y + onepixel, oJumpPad)) {
+        vsp = jumpspeed * 1.5; // Beispiel: 1.5-fache Sprunggeschwindigkeit
+    }
 }
 
 // Vertikale Bewegung ausführen
 y += vsp;
 
 // Calculate current Status
-onground = place_meeting(x, y + groundbuffer, oBlock) || place_meeting(x, y + groundbuffer, oBlockHalf);
+onground = place_meeting(x, y + groundbuffer, oBlock) || place_meeting(x, y + groundbuffer, oBlockHalf) || place_meeting(x, y + groundbuffer, oJumpPad);
 if (onground) jumpbuffer = 10;
 
 // Adjust Sprite Image
