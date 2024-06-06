@@ -4,7 +4,9 @@ max_hsp = 5;
 vsp = 0; //vertical speed variablle, not called vspeed
 grav = 0.5
 
+//TileMapCollison
 
+my_tilemap = layer_tilemap_get_id("Tiles_1");
 
 
 //player inputs
