@@ -27,3 +27,4 @@ decel = 0.3; //deceleration
 //JumpPad
 
 JumpPadPower = 1.5
+JumpPadPowerSuper = 2.5

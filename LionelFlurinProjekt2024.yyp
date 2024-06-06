@@ -42,6 +42,7 @@
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"rLevel1","path":"rooms/rLevel1/rLevel1.yy",},},
     {"id":{"name":"sndBackgroundmusic","path":"sounds/sndBackgroundmusic/sndBackgroundmusic.yy",},},
+    {"id":{"name":"sndJumpSound","path":"sounds/sndJumpSound/sndJumpSound.yy",},},
     {"id":{"name":"sBlock","path":"sprites/sBlock/sBlock.yy",},},
     {"id":{"name":"sBlockHalf","path":"sprites/sBlockHalf/sBlockHalf.yy",},},
     {"id":{"name":"sJumppad","path":"sprites/sJumppad/sJumppad.yy",},},
