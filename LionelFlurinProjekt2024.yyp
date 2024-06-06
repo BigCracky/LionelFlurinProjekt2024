@@ -34,6 +34,7 @@
   },
   "name":"LionelFlurinProjekt2024",
   "resources":[
+    {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
     {"id":{"name":"oBackgroundMusic","path":"objects/oBackgroundMusic/oBackgroundMusic.yy",},},
     {"id":{"name":"oBlock","path":"objects/oBlock/oBlock.yy",},},
     {"id":{"name":"oBlockHalf","path":"objects/oBlockHalf/oBlockHalf.yy",},},
