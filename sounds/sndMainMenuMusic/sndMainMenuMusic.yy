@@ -1,16 +1,16 @@
 {
   "$GMSound":"",
-  "%Name":"sndBackgroundmusic",
+  "%Name":"sndMainMenuMusic",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
-  "bitDepth":0,
+  "bitDepth":1,
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":130.92888,
-  "name":"sndBackgroundmusic",
+  "duration":15.36,
+  "name":"sndMainMenuMusic",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndBackgroundmusic.mp3",
+  "soundFile":"sndMainMenuMusic.wav",
   "type":0,
-  "volume":0.03,
+  "volume":0.04,
 }
