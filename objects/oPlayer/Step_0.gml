@@ -41,9 +41,9 @@ if (jumpbuffer > 0) { // Überprüfen, ob der Sprungpuffer größer als 0 ist
 // ---------------------------
 // Horizontale Kollision
 // ---------------------------
-if (place_meeting(x + hsp, y, oBlock) || place_meeting(x + hsp, y, oBlockHalf)) {
+if (place_meeting(x + hsp, y, my_tilemap)) {
     var onepixel = sign(hsp);
-    while (!place_meeting(x + onepixel, y, oBlock) && !place_meeting(x + onepixel, y, oBlockHalf)) {
+    while (!place_meeting(x + onepixel, y, my_tilemap)) {
         x += onepixel;
     }
     hsp = 0;    
@@ -55,9 +55,9 @@ x += hsp;
 // ---------------------------
 // Vertikale Kollision
 // ---------------------------
-if (place_meeting(x, y + vsp, oBlock) || place_meeting(x, y + vsp, oBlockHalf)) {
+if (place_meeting(x, y + vsp, my_tilemap)) {
     var onepixel = sign(vsp);
-    while (!place_meeting(x, y + onepixel, oBlock) && !place_meeting(x, y + onepixel, oBlockHalf)) {
+    while (!place_meeting(x, y + onepixel, my_tilemap)) {
         y += onepixel;
     }
     vsp = 0;    
@@ -69,7 +69,7 @@ y += vsp;
 // ---------------------------
 // Statusberechnung
 // ---------------------------
-onground = place_meeting(x, y + groundbuffer, oBlock) || place_meeting(x, y + groundbuffer, oBlockHalf);
+onground = place_meeting(x, y + groundbuffer, my_tilemap);
 if (onground) jumpbuffer = 10;
 
 // ---------------------------
