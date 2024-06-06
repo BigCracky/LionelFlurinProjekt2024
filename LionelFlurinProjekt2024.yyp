@@ -41,6 +41,7 @@
     {"id":{"name":"oButtonExit","path":"objects/oButtonExit/oButtonExit.yy",},},
     {"id":{"name":"oButtonParent","path":"objects/oButtonParent/oButtonParent.yy",},},
     {"id":{"name":"oButtonPlay","path":"objects/oButtonPlay/oButtonPlay.yy",},},
+    {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oCoin","path":"objects/oCoin/oCoin.yy",},},
     {"id":{"name":"oJumpPad","path":"objects/oJumpPad/oJumpPad.yy",},},
     {"id":{"name":"oJumpPadSuper","path":"objects/oJumpPadSuper/oJumpPadSuper.yy",},},
