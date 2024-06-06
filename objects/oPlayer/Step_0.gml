@@ -54,7 +54,7 @@ if (place_meeting(x, y + vsp, oBlock) || place_meeting(x, y + vsp, oBlockHalf) |
 
     // Zusatzsprung bei Kollision mit oJumpPad
     if (place_meeting(x, y + onepixel, oJumpPad)) {
-        vsp = jumpspeed * 1.5; // Beispiel: 1.5-fache Sprunggeschwindigkeit
+        vsp = jumpspeed * JumpPadPower; // Beispiel: 1.5-fache Sprunggeschwindigkeit
     }
 }
 
