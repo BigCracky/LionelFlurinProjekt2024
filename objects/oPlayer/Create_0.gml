@@ -1,28 +1,32 @@
 //speeds
-hsp = 0; // horizontale Geschwindigkeit, nennt man nicht hspeed
+hsp = 0; // horizontalle geschwindigkeit, nennt man nicht hspeed
 max_hsp = 5;  
-vsp = 0; // vertikale Geschwindigkeit, nicht vspeed
-grav = 0.5; // Hier fehlte das Semikolon
+vsp = 0; //vertical speed variablle, not called vspeed
+grav = 0.5
 
-//TileMapCollision
+//TileMapCollison
+
 my_tilemap = layer_tilemap_get_id("Tiles_1");
 
+
 //player inputs
-key_left = 0;
-key_right = 0;
-key_jump = 0;
-key_jump_held = 0;
+
+key_left = 0 
+key_right = 0
+key_jump = 0
+key_jump_held = 0
 
 // jumping 
-onground = false;
-groundbuffer = 10; // Man darf springen, wenn man wenigstens 3 Pixel in der Nähe ist
-jumpspeed = -12; // Je negativer, desto höher
-jumpbuffer = 4; // Frames nach dem Verlassen des Bodens, in denen man noch springen kann
-
+onground=false
+groundbuffer = 10; //man darf springen wenn man wenigsten 3 pixel in der nahe ist
+jumpspeed = -12; //more negative equals higher
+jumpbuffer = 4; //frames after leaving the ground where we can still jump
 // momentum 
-accel = 0.5; // Beschleunigung
-decel = 0.3; // Verzögerung
+
+accel = 0.5; //an acceleration variable die als 0.5 definiert worden ist
+decel = 0.3; //deceleration 
 
 //JumpPad
-JumpPadPower = 1.5;
-JumpPadPowerSuper = 2.5;
+
+JumpPadPower = 1.5
+JumpPadPowerSuper = 2.5
