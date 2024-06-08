@@ -1,3 +1,2 @@
-//nur fur MainMenumsuic
-
-audio_play_sound(sndMainMenu, 1, true);
+// Starte die Hintergrundmusik im Hauptmenü
+audio_play_sound(sndMainMenuMusic, 1, true);
