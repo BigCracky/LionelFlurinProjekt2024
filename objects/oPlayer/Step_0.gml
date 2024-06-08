@@ -103,3 +103,9 @@ if (keyboard_check_pressed(vk_enter)) {
 if (locked == false && place_meeting(x, y, oDoor)) {
     room_goto(rLevel2); // Wechsel zu rLevel2
 }
+
+
+if (room == rMenu) {
+	audio_stop_sound(sndBackgroundmusic)
+	
+}
