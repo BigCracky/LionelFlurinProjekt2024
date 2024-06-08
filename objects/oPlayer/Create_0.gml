@@ -30,3 +30,9 @@ decel = 0.3; //deceleration
 
 JumpPadPower = 1.5
 JumpPadPowerSuper = 2.5
+
+//Tuere 
+locked = true
+
+//Licht
+light_radius = 150
