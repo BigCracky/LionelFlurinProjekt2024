@@ -58,6 +58,7 @@
     {"id":{"name":"rLevel1","path":"rooms/rLevel1/rLevel1.yy",},},
     {"id":{"name":"rLevelTutorial","path":"rooms/rLevelTutorial/rLevelTutorial.yy",},},
     {"id":{"name":"rMenu","path":"rooms/rMenu/rMenu.yy",},},
+    {"id":{"name":"scriptESC","path":"scripts/scriptESC/scriptESC.yy",},},
     {"id":{"name":"sndBackgroundmusic","path":"sounds/sndBackgroundmusic/sndBackgroundmusic.yy",},},
     {"id":{"name":"sndJumpSound","path":"sounds/sndJumpSound/sndJumpSound.yy",},},
     {"id":{"name":"sndMainMenuMusic","path":"sounds/sndMainMenuMusic/sndMainMenuMusic.yy",},},

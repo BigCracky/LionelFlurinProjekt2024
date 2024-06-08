@@ -1,10 +1,10 @@
 // ---------------------------
 // Eingaben / Variablen
 // ---------------------------
-key_left = keyboard_check(vk_left);
-key_right = keyboard_check(vk_right);
-key_jump = keyboard_check_pressed(vk_up);
-key_jump_held = keyboard_check(vk_up);
+key_left = keyboard_check(ord("A"));
+key_right = keyboard_check(ord("D"));
+key_jump = keyboard_check_pressed(ord("W"));
+key_jump_held = keyboard_check(ord("W"));
 
 // Bewegungsrichtung bestimmen (-1 ist links, 1 ist rechts und 0 ist nichts)
 var dir = key_right - key_left; // Wenn beide links und rechts gedrückt werden, ergibt es 0 (nichts passiert)
