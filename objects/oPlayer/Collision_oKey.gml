@@ -1,7 +1,2 @@
- instance_destroy(oKey);
- 
-  with (oDoor) {
-        locked = false;
-        sprite_index = sDoorUnlocked;
-	
-}
+locked = false 
+instance_destroy(oKey)
