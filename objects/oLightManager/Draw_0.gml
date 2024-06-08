@@ -14,7 +14,7 @@ gpu_set_blendmode(bm_subtract);
 
 // Draw the light circle around the player
 draw_set_color(c_white);
-var light_radius = 150; // Adjust the radius as needed
+var light_radius = 150; 
 draw_circle_color(oPlayer.x, oPlayer.y, light_radius, c_white, c_black, false);
 
 // Reset the blend mode
