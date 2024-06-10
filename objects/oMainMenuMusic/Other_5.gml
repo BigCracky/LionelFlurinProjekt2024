@@ -1,2 +1,3 @@
-// Starte die Hintergrundmusik im Hauptmenü
+//nur musik
+
 audio_stop_sound(sndMainMenuMusic)

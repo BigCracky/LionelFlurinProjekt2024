@@ -93,10 +93,17 @@ if (!onground) { // In der Luft
 }
 
 // ---------------------------
-// Spiel schnell neu starten
+// Spiel Spielen / Neustarten
 // ---------------------------
 if (keyboard_check_pressed(vk_enter)) {
     room_goto(rLevel1);
+}
+
+//------------------------
+// Ins Tutorial gehen
+// ----------------------
+if (keyboard_check(vk_shift)) {
+	room_goto(rLevelTutorial);
 }
 
 // Überprüfen, ob die Tür entsperrt ist und der Spieler mit der Tür kollidiert

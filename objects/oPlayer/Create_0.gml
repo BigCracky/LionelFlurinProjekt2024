@@ -36,3 +36,5 @@ locked = true
 
 //Licht
 light_radius = 150
+
+

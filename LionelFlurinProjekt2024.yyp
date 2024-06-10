@@ -48,6 +48,7 @@
     {"id":{"name":"oChain","path":"objects/oChain/oChain.yy",},},
     {"id":{"name":"oCoin","path":"objects/oCoin/oCoin.yy",},},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},},
+    {"id":{"name":"oFullscreen","path":"objects/oFullscreen/oFullscreen.yy",},},
     {"id":{"name":"oJumpPad","path":"objects/oJumpPad/oJumpPad.yy",},},
     {"id":{"name":"oJumpPadSuper","path":"objects/oJumpPadSuper/oJumpPadSuper.yy",},},
     {"id":{"name":"oKey","path":"objects/oKey/oKey.yy",},},
