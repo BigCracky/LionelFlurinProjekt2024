@@ -91,8 +91,8 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rMenu","path":"rooms/rMenu/rMenu.yy",},},
-    {"roomId":{"name":"rLevel1","path":"rooms/rLevel1/rLevel1.yy",},},
     {"roomId":{"name":"rLevelTutorial","path":"rooms/rLevelTutorial/rLevelTutorial.yy",},},
+    {"roomId":{"name":"rLevel1","path":"rooms/rLevel1/rLevel1.yy",},},
     {"roomId":{"name":"rLevel2","path":"rooms/rLevel2/rLevel2.yy",},},
   ],
   "templateType":"game",
