@@ -96,7 +96,7 @@ if (!onground) { // In der Luft
 // Spiel Spielen / Neustarten
 // ---------------------------
 if (keyboard_check_pressed(vk_enter)) {
-    room_goto(rLevel1);
+    room_restart();
 }
 
 //------------------------
