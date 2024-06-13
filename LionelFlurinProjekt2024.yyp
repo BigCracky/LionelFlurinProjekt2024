@@ -60,6 +60,7 @@
     {"id":{"name":"oSpike","path":"objects/oSpike/oSpike.yy",},},
     {"id":{"name":"rLevel1","path":"rooms/rLevel1/rLevel1.yy",},},
     {"id":{"name":"rLevel2","path":"rooms/rLevel2/rLevel2.yy",},},
+    {"id":{"name":"rLevel3","path":"rooms/rLevel3/rLevel3.yy",},},
     {"id":{"name":"rLevelTutorial","path":"rooms/rLevelTutorial/rLevelTutorial.yy",},},
     {"id":{"name":"rMenu","path":"rooms/rMenu/rMenu.yy",},},
     {"id":{"name":"scriptESC","path":"scripts/scriptESC/scriptESC.yy",},},
@@ -94,6 +95,7 @@
     {"roomId":{"name":"rLevelTutorial","path":"rooms/rLevelTutorial/rLevelTutorial.yy",},},
     {"roomId":{"name":"rLevel1","path":"rooms/rLevel1/rLevel1.yy",},},
     {"roomId":{"name":"rLevel2","path":"rooms/rLevel2/rLevel2.yy",},},
+    {"roomId":{"name":"rLevel3","path":"rooms/rLevel3/rLevel3.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
