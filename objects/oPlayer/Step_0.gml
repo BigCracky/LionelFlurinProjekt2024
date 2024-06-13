@@ -108,7 +108,8 @@ if (keyboard_check(vk_shift)) {
 
 // Überprüfen, ob die Tür entsperrt ist und der Spieler mit der Tür kollidiert
 if (locked == false && place_meeting(x, y, oDoor)) {
-    room_goto(rLevel2); // Wechsel zu rLevel2
+    room_goto(rLevel2);// Wechsel zu rLevel2
+	locked = true; //Türen wieder schliessen
 }
 
 
