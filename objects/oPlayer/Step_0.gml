@@ -105,15 +105,13 @@ if (keyboard_check_pressed(vk_enter)) {
 if (keyboard_check(vk_shift)) {
 	room_goto(rLevelTutorial);
 }
-
-// Überprüfen, ob die Tür entsperrt ist und der Spieler mit der Tür kollidiert
+// Überprüft, ob die Tür entsperrt ist und der Spieler mit der Tür kollidiert
 if (locked == false && place_meeting(x, y, oDoor)) {
-    room_goto_next();// Wechsel zu rLevel2
+    room_goto_next();// Wechsel zum nächsten Level
 	locked = true; //Türen wieder schliessen
 }
 
-
+//stoppt die Spielmusik im Menu
 if (room == rMenu) {
-	audio_stop_sound(sndBackgroundmusic)
-	
+	audio_stop_sound(sndBackgroundmusic)	
 }
