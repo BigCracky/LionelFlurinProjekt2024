@@ -1,1 +1,1 @@
-room_restart(); //Sterbe funktion
+room_restart();
