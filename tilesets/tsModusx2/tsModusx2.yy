@@ -18,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"sLevel5",
-    "path":"sprites/sLevel5/sLevel5.yy",
+    "name":"sLevel5Background",
+    "path":"sprites/sLevel5Background/sLevel5Background.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
