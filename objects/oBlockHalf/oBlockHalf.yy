@@ -27,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,
-  "spriteId":{
-    "name":"sBlockHalf",
-    "path":"sprites/sBlockHalf/sBlockHalf.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
