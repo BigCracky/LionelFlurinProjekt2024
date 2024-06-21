@@ -1,118 +1,97 @@
-// ---------------------------
 // Eingaben / Variablen
-// ---------------------------
-key_left = keyboard_check(ord("A"));
-key_right = keyboard_check(ord("D"));
-key_jump = keyboard_check_pressed(ord("W"));
-key_jump_held = keyboard_check(ord("W"));
+key_left = keyboard_check(ord("A")); // Prüft, ob die linke Taste (A) gedrückt wird
+key_right = keyboard_check(ord("D")); // Prüft, ob die rechte Taste (D) gedrückt wird
+key_jump = keyboard_check_pressed(ord("W")); // Prüft, ob die Sprungtaste (W) gerade gedrückt wurde
+key_jump_held = keyboard_check(ord("W")); // Prüft, ob die Sprungtaste (W) gehalten wird
 
 // Bewegungsrichtung bestimmen (-1 ist links, 1 ist rechts und 0 ist nichts)
-var dir = key_right - key_left; // Wenn beide links und rechts gedrückt werden, ergibt es 0 (nichts passiert)
+var dir = key_right - key_left; // Berechnet die Bewegungsrichtung basierend auf den Richtungstasten
 
-// ---------------------------
 // Horizontale Geschwindigkeit
-// ---------------------------
-hsp += dir * accel;
+hsp += dir * accel; // Beschleunigt oder verlangsamt je nach Richtungstaste
 
 if (dir == 0) { // Verlangsamen, wenn keine Richtungstaste gedrückt wird
     if (hsp < 0) {
-        hsp = min(hsp + decel, 0); // Nach links gehend
-    } else { 
-        hsp = max(hsp - decel, 0); // Nach rechts gehend
+        hsp = min(hsp + decel, 0); // Verlangsamt die Geschwindigkeit nach links
+    } else {
+        hsp = max(hsp - decel, 0); // Verlangsamt die Geschwindigkeit nach rechts
     }
 }
 
-hsp = clamp(hsp, -max_hsp, max_hsp); // Maximalgeschwindigkeit festlegen, links oder rechts, wird im Create-Event definiert
+hsp = clamp(hsp, -max_hsp, max_hsp); // Begrenzt die maximale Horizontale Geschwindigkeit
 
-// ---------------------------
 // Vertikale Bewegung
-// ---------------------------
-vsp += grav;
+vsp += grav; // Fügt die Gravitation zur vertikalen Geschwindigkeit hinzu
 
 // Ground jump 
-if (jumpbuffer > 0) { // Überprüfen, ob der Sprungpuffer größer als 0 ist
-    jumpbuffer--;   // Sprungpuffer um 1 verringern
-    if (key_jump) { // Überprüfen, ob die Sprungtaste gedrückt wurde
-        jumpbuffer = 0; // Sprungpuffer auf 0 setzen (damit man nicht zweimal springen kann)
-        vsp = jumpspeed; 
-    }    
-}
-
-// ---------------------------
-// Horizontale Kollision
-// ---------------------------
-if (place_meeting(x + hsp, y, my_tilemap)) {
-    var onepixel = sign(hsp);
-    while (!place_meeting(x + onepixel, y, my_tilemap)) {
-        x += onepixel;
+if (jumpbuffer > 0) { // Überprüft, ob der Sprungpuffer größer als 0 ist
+    jumpbuffer--; // Reduziert den Sprungpuffer
+    if (key_jump) { // Überprüft, ob die Sprungtaste gedrückt wurde
+        jumpbuffer = 0; // Setzt den Sprungpuffer auf 0 zurück, um Doppelsprünge zu verhindern
+        vsp = jumpspeed; // Setzt die vertikale Geschwindigkeit für den Sprung
     }
-    hsp = 0;    
 }
 
-// Horizontale Bewegung ausführen
+// Horizontale Kollision
+if (place_meeting(x + hsp, y, my_tilemap)) {
+    var onepixel = sign(hsp); // Bestimmt die Richtung für Kollisionskorrekturen
+    while (!place_meeting(x + onepixel, y, my_tilemap)) {
+        x += onepixel; // Korrigiert die Kollision um einen Pixel
+    }
+    hsp = 0; // Stoppt die horizontale Bewegung
+}
+
+// Führt die horizontale Bewegung aus
 x += hsp;
 
-// ---------------------------
 // Vertikale Kollision
-// ---------------------------
 if (place_meeting(x, y + vsp, my_tilemap)) {
-    var onepixel = sign(vsp);
+    var onepixel = sign(vsp); // Bestimmt die Richtung für Kollisionskorrekturen
     while (!place_meeting(x, y + onepixel, my_tilemap)) {
-        y += onepixel;
+        y += onepixel; // Korrigiert die Kollision um einen Pixel
     }
-    vsp = 0;    
+    vsp = 0; // Stoppt die vertikale Bewegung
 }
 
-// Vertikale Bewegung ausführen
+// Führt die vertikale Bewegung aus
 y += vsp;
 
-// ---------------------------
 // Statusberechnung
-// ---------------------------
-onground = place_meeting(x, y + groundbuffer, my_tilemap);
-if (onground) jumpbuffer = 10;
+onground = place_meeting(x, y + groundbuffer, my_tilemap); // Überprüft, ob der Spieler den Boden berührt
+if (onground) jumpbuffer = 10; // Setzt den Sprungpuffer, wenn der Spieler den Boden berührt
 
-// ---------------------------
 // Sprite-Anpassung
-// ---------------------------
-image_speed = 1; // 100% Bildgeschwindigkeit
+image_speed = 1; // Setzt die Bildgeschwindigkeit auf 100%
 
-// Wenn sich der Spieler bewegt, Sprite entsprechend der Bewegungsrichtung ausrichten
-if (hsp != 0) image_xscale = sign(hsp);
-
-if (!onground) { // In der Luft
-    sprite_index = sPlayerAir;
-    image_speed = 0;
-    image_index = (vsp > 0); // Fallend = 1, alles andere = 0
-} else { // Am Boden
-    if (hsp != 0) { // Wenn sich der Spieler nach links oder rechts bewegt
-        sprite_index = sPlayerRun;
-    } else { // Steht still
-        sprite_index = sPlayer;
-    }
+if (hsp != 0) { // Wenn der Spieler sich horizontal bewegt
+    sprite_index = sPlayerRun; // Setzt den Lauf-Sprite
+    image_xscale = sign(hsp); // Spiegelt den Sprite je nach Bewegungsrichtung
+} else if (!onground) { // Wenn der Spieler in der Luft ist
+    sprite_index = sPlayerAir; // Setzt den Luft-Sprite
+    image_speed = 0; // Stoppt die Animation
+    image_index = (vsp > 0); // Setzt den Frame basierend auf der vertikalen Bewegungsrichtung
+} else { // Wenn der Spieler steht
+    sprite_index = sPlayer; // Setzt den Stand-Sprite
 }
 
-// ---------------------------
-// Spiel Spielen / Neustarten
-// ---------------------------
+// Spiel spielen / Neustarten
 if (keyboard_check_pressed(vk_enter)) {
-    room_restart();
+    room_restart(); // Startet das Level neu
 }
 
-//------------------------
 // Ins Tutorial gehen
-// ----------------------
 if (keyboard_check(vk_shift)) {
-	room_goto(rLevelTutorial);
+    room_goto(rLevelTutorial); // Wechselt zum Tutorial-Level
 }
+
 // Überprüft, ob die Tür entsperrt ist und der Spieler mit der Tür kollidiert
 if (locked == false && place_meeting(x, y, oDoor)) {
-    room_goto_next();// Wechsel zum nächsten Level
-	locked = true; //Türen wieder schliessen
+    room_goto_next(); // Wechselt zum nächsten Level
+    locked = true; // Sperrt die Tür wieder
 }
 
-//stoppt die Spielmusik im Menu
+// Stoppt die Spielmusik im Menü
 if (room == rMenu) {
-	audio_stop_sound(sndBackgroundmusic);
-	audio_stop_sound(sndFinishMusic);
+    audio_stop_sound(sndBackgroundmusic); // Stoppt die Hintergrundmusik
+    audio_stop_sound(sndFinishMusic); // Stoppt die Endmusik
 }

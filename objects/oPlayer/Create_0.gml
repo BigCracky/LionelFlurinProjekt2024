@@ -26,7 +26,7 @@ jumpbuffer = 4; //frames after leaving the ground where we can still jump
 accel = 0.5; //an acceleration variable die als 0.5 definiert worden ist
 decel = 0.3; //deceleration 
 
-//JumpPad
+//JumpPad //irrelevant, kommt nicht im Spiel vor
 
 JumpPadPower = 1.5
 JumpPadPowerSuper = 2.5
