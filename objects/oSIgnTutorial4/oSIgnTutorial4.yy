@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"oSIgnTutorial4",
+  "%Name":"oSignTutorial4",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oSIgnTutorial4",
+  "name":"oSignTutorial4",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",

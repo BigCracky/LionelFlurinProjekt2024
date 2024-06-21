@@ -113,5 +113,6 @@ if (locked == false && place_meeting(x, y, oDoor)) {
 
 //stoppt die Spielmusik im Menu
 if (room == rMenu) {
-	audio_stop_sound(sndBackgroundmusic)	
+	audio_stop_sound(sndBackgroundmusic);
+	audio_stop_sound(sndFinishMusic);
 }

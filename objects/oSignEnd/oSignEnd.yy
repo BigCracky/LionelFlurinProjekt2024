@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"oSignTutorial2",
+  "%Name":"oSignEnd",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oSignTutorial2",
+  "name":"oSignEnd",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -29,7 +29,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"SignText","filters":[],"listItems":[],"multiselect":false,"name":"SignText","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"Avoid spikes by jumping","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"SignText","filters":[],"listItems":[],"multiselect":false,"name":"SignText","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"This is the end. Thank you for playing!","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

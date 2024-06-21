@@ -1,1 +1,1 @@
-audio_stop_sound(sndFinishMusic)
+audio_stop_sound(sndFinishMusic);
