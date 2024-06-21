@@ -1,16 +1,16 @@
 {
   "$GMPath":"",
-  "%Name":"pArrow3",
+  "%Name":"pArrow4",
   "closed":false,
   "kind":0,
-  "name":"pArrow3",
+  "name":"pArrow4",
   "parent":{
     "name":"Paths",
     "path":"folders/Paths.yy",
   },
   "points":[
-    {"speed":100.0,"x":1212.0,"y":630.0,},
-    {"speed":100.0,"x":54.0,"y":628.0,},
+    {"speed":100.0,"x":100.0,"y":774.0,},
+    {"speed":100.0,"x":474.0,"y":774.0,},
   ],
   "precision":4,
   "resourceType":"GMPath",
