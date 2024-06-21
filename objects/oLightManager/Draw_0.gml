@@ -25,3 +25,4 @@ surface_reset_target();
 
 // Draw the entire screen with the light surface overlay
 draw_surface(light_surface, 0, 0);
+
